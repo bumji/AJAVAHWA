@@ -1,6 +1,6 @@
 package day4;
 
-public class QuestEx2 {
+public class QuestEx4 {
 
 	public static void main(String[] args) {
 		// 1.정수 10개를 저장할 수 있는 배열을 선언하고 생성하세요. - 배열 선언 및 생성
@@ -11,22 +11,11 @@ public class QuestEx2 {
 		// 4.인덱스(번지)가 짝수이면 현재 저장된 수에 2를 곱해서 저장하세요. - 반복문 안에서 조건문 사용, 작성 방법에 따라 continue를 사용할 수 있다.
 		// 5.저장된 배열의 값을 다시 출력하세요. 
 		
-		/*int[] arr = new int[10];
-		for(int i=0; i < arr.length; i++) {
-			arr[i] = i + 1;
-		}
-		
-		
-	    // if(인덱스 % 2 == 0){
-		//수 = *2
-		*/
 		
 		int arr[] = new int[10];   // 1.
 		for(int i = 0; i < arr.length; i++) {   //for(0번지부터 9번지까지 1씩 증가) i<10도 가능
 			arr[i] = i + 1;
 		}
-		/*System.out.println(arr[0]);
-		System.out.println(arr[1]); --- arr[9]; */
 		
 		//for(i는 0번지부터 9번지까지 1씩 증가)
 		//0번지부터 9번지까지 배열의 값을 출력
