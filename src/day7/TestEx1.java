@@ -31,17 +31,17 @@ public class TestEx1 {
 	 */
 	
 	public static boolean createArray(int min, int max, int n, int []arr) {
-		if(arr == null)  //빈 배열을 넘겨줌
+		if(arr == null)  //배열이 안 만들어져있음 (빈 배열을 넘겨줌)
 			return false; 
-		if(max - min + 1 < n)
+		if(max - min + 1 < n) //랜덤하게 만들 수 있는 가지수 < 내가 만들어야 하는 수
 			return false; //배열 생성 안 되는 경우
 		int cnt = 0;  //현재 배열에 저장된 원소의 갯수
 		while(cnt < n) {
-			int r = random(min, max);
-			if(!isDuplicated(arr, r)) {
+			int r = random(min, max); //r이 배ㅕㅇㄹ에 있는지 없는지 
+			if(!isDuplicated(arr, r)) { 
 				// arr[cnt++] = r;  아래 두 줄을 합친 코드
-				arr[cnt] = r;
-				cnt++;
+				arr[cnt] = r; // 배열에 저장하고 
+				cnt++; // 하나 증가시켜 
 			}
 		}
 		return true;
@@ -51,7 +51,7 @@ public class TestEx1 {
 	
 	
 	
-	
+	//min과 max 사이의 랜덤한 수를 구하기
 	public static int random(int min, int max) {
 		// 1,9로 알려줘야 하는데 9,1로 알려준 경우 1,9로 처리하기 위해 두 수를 교환
 		if(min > max) {
@@ -62,7 +62,7 @@ public class TestEx1 {
 		return (int)(Math.random()*(max - min + 1)+ min);
 	}
 	
-	
+	//배열의 값을 콘솔에 입력
 	public static void printArray(int []arr) {
 		for(int i=0; i<arr.length; i++) {    //배열의 값을 0번지부터 마지막까지 접근하는 반복문! 암기★
 			System.out.print(arr[i]+" ");
@@ -70,7 +70,7 @@ public class TestEx1 {
 		System.out.println();
 	}
 	
-	
+	//중복 찾기/ num이 arr에 있으면 true, 아니면 false
 	public static boolean isDuplicated(int []arr, int num) {
 		for(int i=0; i<arr.length; i++) {
 			if(arr[i] == num) {
